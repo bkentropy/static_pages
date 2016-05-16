@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root             'static_pages#home'
   get 'help'    => 'static_pages#help'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
-
-# Rails.application.routes.draw do
-#   root 'static_pages#home' # this looks like localhost:3000
-#   get 'static_pages/help' # goes to localhost:3000/static_pages/help
-#   get 'static_pages/about' # goes to localhost:3000/static_pages/about
-#   get 'static_pages/contact' # goes to localhost:3000/static_pages/contact
+  get 'signup'  => 'users#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
